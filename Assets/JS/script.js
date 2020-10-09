@@ -27,6 +27,19 @@ var passwordSpecialCharacters = window.confirm(
   "Would you like to include special characters?"
 );
 
+// create array for character codes
+var arrayFromLowToHigh = function (low, high) {
+  var array = [];
+  for (let i = low; i <= high; i++) {
+    array.push(i);
+  }
+  return array;
+};
+
+
+
+
+
 var generatePassword = function (passwordLength, passwordLowerCase, passwordUpperCase, passwordSpecialCharacters) {
   console.log(passwordLength, passwordLowerCase, passwordUpperCase, passwordSpecialCharacters)
 };
