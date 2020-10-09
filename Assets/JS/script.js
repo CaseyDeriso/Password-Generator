@@ -14,6 +14,10 @@ if (passwordLength <= 7 || passwordLength >= 129 || passwordLength === null) {
   /// some validation code
 }
 
+// as user for numbers 
+var passwordNumbers = window.confirm(
+  "would you like to include numbers?"
+)
 // ask user for lower case characters
 var passwordLowerCase = window.confirm(
   "Would you like to include lower case characters?"
@@ -35,6 +39,18 @@ var arrayFromLowToHigh = function (low, high) {
   }
   return array;
 };
+
+// upper case character codes
+var UpperCaseCharCodes = arrayFromLowToHigh(65, 90);
+// lower case character codes
+var LowerCaseCharCodes = arrayFromLowToHigh(97, 122);
+// number character codes
+var NumberCharCodes = arrayFromLowToHigh(48, 570);
+// special character codes
+var SpecialCharCodes = arrayFromLowToHigh(33, 47)
+  .concat(arrayFromLowToHigh(58, 64))
+  .concat(arrayFromLowToHigh(91, 96))
+  .concat(arrayFromLowToHigh(123, 126));
 
 
 
