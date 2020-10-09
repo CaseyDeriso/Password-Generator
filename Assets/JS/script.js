@@ -1,6 +1,6 @@
-// Assignment code here
+// Initialize app
 
-// create validation function to ask user for password length 8-128 characters
+// create validation function to only recieve password length 8-128. 
 // default to 10 characters
 let passwordLength = 10;
 const askLength = function() {
@@ -97,13 +97,13 @@ const generatePassword = function (
 const generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
+(function writePassword() {
   let password = generatePassword(passwordLength, passwordLowerCase, passwordUpperCase, passwordSpecialCharacters, passwordNumbers);
   const passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 
-}
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
+})();
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
